@@ -1,0 +1,7 @@
+interface:
+  display_name: "FlowUs Media Upload"
+  short_description: "Upload supported media and insert verified FlowUs blocks"
+  default_prompt: "Use $flowus-media-upload to upload this file through the FlowUs CLI and verify the resulting block."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,20 @@
+{
+  "name": "drivinggodj-study",
+  "interface": {
+    "displayName": "DrivingGodJ Study"
+  },
+  "plugins": [
+    {
+      "name": "codex-flowus-study-suite",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-flowus-study-suite"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

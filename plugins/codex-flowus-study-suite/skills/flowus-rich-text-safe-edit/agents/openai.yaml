@@ -1,0 +1,7 @@
+interface:
+  display_name: "FlowUs Rich Text Safe Edit"
+  short_description: "Change only targeted rich-text fields and preserve formatting"
+  default_prompt: "Use $flowus-rich-text-safe-edit to make this precise FlowUs formatting change and verify it by readback."
+
+policy:
+  allow_implicit_invocation: true

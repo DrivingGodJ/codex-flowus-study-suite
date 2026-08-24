@@ -1,0 +1,7 @@
+interface:
+  display_name: "FlowUs Study Planner"
+  short_description: "Research and safely maintain structured learning plans"
+  default_prompt: "Use $flowus-study-planner to build or update this FlowUs learning plan while preserving remote manual edits."
+
+policy:
+  allow_implicit_invocation: true

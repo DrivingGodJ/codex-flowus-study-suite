@@ -1,0 +1,23 @@
+{
+  "name": "codex-flowus-study-suite",
+  "version": "0.1.0",
+  "description": "Remote-first FlowUs study planning, rich-text-safe editing, and media upload workflows for Codex.",
+  "author": {
+    "name": "DrivingGodJ"
+  },
+  "keywords": ["flowus", "study", "learning-plan", "rich-text", "media"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "FlowUs Study Suite",
+    "shortDescription": "Build and safely maintain learning plans in FlowUs.",
+    "longDescription": "Researches learning resources, updates FlowUs pages with minimum diffs, preserves rich-text formatting, and uploads supported media through the FlowUs CLI.",
+    "developerName": "DrivingGodJ",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "defaultPrompt": [
+      "Create a structured study plan in FlowUs after researching current learning resources.",
+      "Update this FlowUs learning page without overwriting my manual edits.",
+      "Upload this image to FlowUs and insert it at the requested position."
+    ]
+  }
+}
