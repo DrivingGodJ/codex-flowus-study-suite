@@ -2,54 +2,35 @@
 
 # Codex FlowUs Study Suite
 
-A Codex plugin for researching learning resources, organizing study plans and updating FlowUs pages while preserving manual edits and rich-text formatting.
+Turn courses, resources and project ideas into a learning path that evolves with your progress instead of generating a new plan from scratch each time.
 
-## Features
+## From a resource list to a learning path
 
-| Skill | Purpose |
+Research courses around a goal, distinguish the main path from alternatives, and organize projects and checklists in FlowUs. The plan shows what to study next while keeping completion history for later revisions.
+
+> Build an introductory industrial-design learning path, separate essential courses from optional resources, and suggest small projects that demonstrate progress.
+
+## Keep building on existing pages
+
+Read the current page before changing only the blocks that need updating. Preserve manual additions, completed tasks and unaffected links, bold text and colors. Reread after writing to confirm the changes actually landed.
+
+## Include images and files
+
+Upload supported images and files through a compatible FlowUs CLI, then create working media blocks. Resource research, rich-text edits and media uploads are handled by three focused skills within one study-planning workflow.
+
+## Get started
+
+Requires Codex with plugin support and an installed, authenticated, compatible FlowUs CLI. Install the suite, then provide a learning goal or a page to update.
+
+[Installation and user guide](docs/GUIDE.en.md)
+
+## Explore further
+
+| Topic | Documentation |
 | --- | --- |
-| `flowus-study-planner` | Research courses and create or refine learning paths, alternatives, projects and checklists |
-| `flowus-rich-text-safe-edit` | Edit selected rich-text fields while preserving unaffected links, bold text, colors and formatting |
-| `flowus-media-upload` | Upload supported images or files through FlowUs CLI and create working media blocks |
+| Installation, authentication and page editing | [User guide](docs/GUIDE.en.md) |
+| Development and collaboration | [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) |
+| Credentials and security | [Security](SECURITY.md) |
+| Feedback | [Issues](https://github.com/DrivingGodJ/codex-flowus-study-suite/issues) |
 
-## Quick start
-
-Requires Codex with plugin support and an installed, authenticated, compatible `flowus` CLI. [next-space/flowus-skill](https://github.com/next-space/flowus-skill) is one implementation; check its current license and terms separately. The CLI is not bundled here.
-
-```bash
-git clone https://github.com/DrivingGodJ/codex-flowus-study-suite.git
-cd codex-flowus-study-suite
-codex plugin marketplace add .
-codex plugin add codex-flowus-study-suite@drivinggodj-study
-```
-
-Authenticate using the FlowUs CLI's own instructions. Never copy tokens into conversations or the repository.
-
-## Usage
-
-Ask for a study plan for a course, or identify a page and the passages to change. The current remote page remains the source of truth:
-
-- Reread before writing and apply minimal block-level changes instead of replacing the whole page.
-- Preserve manual content and checklist completion unless explicitly asked to change them.
-- Change only the requested rich-text fields, then independently reread the target page or blocks.
-- Stop the affected operation and explain unsupported deletion, reordering or file types.
-- Do not read credential files directly or bypass client/API validation.
-
-## Development and checks
-
-Offline repository checks use Node.js's test runner:
-
-```bash
-npm test
-```
-
-Real page operations still require verification in your own authenticated FlowUs environment.
-
-## Documentation and support
-
-- [Changelog](CHANGELOG.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
-- [Report an issue](https://github.com/DrivingGodJ/codex-flowus-study-suite/issues)
-
-## License and credits
-
-[MIT License](LICENSE). FlowUs CLI source is not included; see [third-party notices](THIRD_PARTY_NOTICES.md).
+[MIT License](LICENSE) · [Origins and third-party notices](THIRD_PARTY_NOTICES.md). Install FlowUs CLI separately and check its own project license.

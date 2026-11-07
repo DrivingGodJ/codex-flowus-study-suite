@@ -2,54 +2,35 @@
 
 # Codex FlowUs 学习规划套件
 
-面向 FlowUs 学习规划的 Codex 插件：调研学习资源、整理规划并安全更新现有页面，保留手工编辑和富文本格式。
+把课程、资料和想做的项目整理成学习路线，再随着实际进展更新，而不是每次从头生成一份新计划。
 
-## 功能特性
+## 从资料清单到学习主线
 
-| 技能 | 用途 |
+围绕一个学习目标调研课程，区分主线与备选资源，把实践项目和检查清单放进 FlowUs。计划既能说明“接下来学什么”，也能留下完成情况，方便后续迭代。
+
+> 帮我整理一条工业设计入门学习路线，区分必学课程和备选资料，并安排可以验证学习成果的小项目。
+
+## 让已有页面继续生长
+
+更新计划时先读取当前页面，再修改需要变化的块。手工补充的内容、已经勾选的任务，以及链接、粗体和颜色等未涉及的格式会保留。修改后重新读取，确认结果确实写入。
+
+## 图片和文件也放进计划
+
+通过兼容的 FlowUs CLI 上传受支持的图片与文件，再创建可显示的媒体块。资源调研、富文本修改和媒体上传由三项技能分别处理，组成同一条学习规划流程。
+
+## 开始使用
+
+需要支持插件的 Codex，以及已安装并登录的兼容版 FlowUs CLI。安装套件后，给出学习目标或要更新的页面即可。
+
+[安装与使用指南](docs/GUIDE.zh-CN.md)
+
+## 进一步了解
+
+| 想了解什么 | 去哪里看 |
 | --- | --- |
-| `flowus-study-planner` | 调研课程，创建或迭代学习主线、备选资源、实践项目和检查清单 |
-| `flowus-rich-text-safe-edit` | 仅修改指定富文本字段，保留链接、粗体、颜色等未涉及的格式 |
-| `flowus-media-upload` | 通过 FlowUs CLI 上传受支持的图片或文件，创建可显示的媒体块 |
+| 安装、认证与页面修改方式 | [使用指南](docs/GUIDE.zh-CN.md) |
+| 开发与协作 | [贡献指南](CONTRIBUTING.md) · [更新记录](CHANGELOG.md) |
+| 凭据与安全 | [安全说明](SECURITY.md) |
+| 问题反馈 | [Issues](https://github.com/DrivingGodJ/codex-flowus-study-suite/issues) |
 
-## 快速开始
-
-需要支持插件的 Codex，以及已安装、已认证的兼容版 `flowus` CLI。[next-space/flowus-skill](https://github.com/next-space/flowus-skill) 是一种实现，使用前需单独检查其当前许可证和条款；本仓库不打包该 CLI。
-
-```bash
-git clone https://github.com/DrivingGodJ/codex-flowus-study-suite.git
-cd codex-flowus-study-suite
-codex plugin marketplace add .
-codex plugin add codex-flowus-study-suite@drivinggodj-study
-```
-
-按 FlowUs CLI 自身说明完成登录。不要把令牌复制到对话或仓库中。
-
-## 使用说明
-
-可请求“为这门课整理学习计划”，或指定一个页面和需要修改的段落。远端页面始终是事实来源：
-
-- 写入前重读页面，以块级最小差异更新，避免整页覆盖。
-- 除非明确要求，保留手工内容与检查项勾选状态。
-- 仅修改指定富文本字段，写入后重新读取目标页面或块验证结果。
-- 不支持的删除、重排或文件类型会停止对应操作并说明限制。
-- 不直接读取 FlowUs 凭据文件，不绕过客户端和接口校验。
-
-## 开发与验证
-
-仓库的离线检查使用 Node.js 测试运行器：
-
-```bash
-npm test
-```
-
-真实页面操作仍需在自己的已认证 FlowUs 环境验证。
-
-## 文档与支持
-
-- [更新记录](CHANGELOG.md) · [参与贡献](CONTRIBUTING.md) · [安全说明](SECURITY.md)
-- [问题反馈](https://github.com/DrivingGodJ/codex-flowus-study-suite/issues)
-
-## 许可与致谢
-
-[MIT License](LICENSE)。本项目不包含 FlowUs CLI 源代码，见[第三方声明](THIRD_PARTY_NOTICES.md)。
+[MIT License](LICENSE) · [来源与第三方声明](THIRD_PARTY_NOTICES.md)。FlowUs CLI 单独安装，其许可见对应项目。
